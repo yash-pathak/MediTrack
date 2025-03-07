@@ -16,11 +16,6 @@ public class InventoryController {
     @Autowired
     InventoryService inventoryService;
 
-    @GetMapping("/test")
-    public String test(){
-        return "test";
-    }
-
     @PostMapping("/addInventory")
     public InventoryItems add(@RequestBody InventoryItems inventoryItems){
         return inventoryService.add(inventoryItems);
